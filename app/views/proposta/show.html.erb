@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @proposta.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @proposta.descricao %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @proposta.valor %>
+</p>
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @proposta.inicio %>
+</p>
+
+<p>
+  <strong>Fim:</strong>
+  <%= @proposta.fim %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @proposta.cidade %>
+</p>
+
+<%= link_to 'Editar', edit_propostum_path(@proposta) %> |
+<%= link_to 'Voltar', proposta_path %>

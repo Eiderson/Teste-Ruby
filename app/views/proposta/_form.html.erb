@@ -1,0 +1,41 @@
+<%= form_for(@proposta) do |f| %>
+  <% if @proposta.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proposta.errors.count, "error") %> prohibited this propostum from being saved:</h2>
+
+      <ul>
+      <% @proposta.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :inicio %><br>
+    <%= f.date_select :inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fim %><br>
+    <%= f.date_select :fim %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade_name %><br>
+    <%= f.text_field :cidade_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+<h1></h1>
+
+<div class= "row">
+    <div class= "col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Editar Proposta</div>
+        <div class= "panel-body">
+           <%= simple_form_for @proposta do |f| %>
+           <%= f.input :nome %>
+           <%= f.input :descricao%>
+           <%= f.input :valor %>
+           <%= f.input :inicio %>
+           <%= f.input :fim %>
+           <%= f.input :cidade %>
+           <%= f.button :submit %>
+        <% end %>
+          
+        </div>
+        
+      </div>
+     
+    </div>
+</div>
+
+<%= link_to 'Mostrar', @propostum %> |
+<%= link_to 'Voltar', proposta_path %>
